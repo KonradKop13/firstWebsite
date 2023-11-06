@@ -1,0 +1,353 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+	text-align: center;
+}
+
+/* Nawigacja */
+
+nav {
+	position: sticky;
+	top: 0;
+	height: 70px;
+	background-color: rgb(22, 28, 23);
+	color: #fff;
+	line-height: 70px;
+	z-index: 2;
+}
+
+.nav-items a {
+	padding: 0 40px;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	transition: color 0.3s;
+}
+
+.nav-items {
+	display: none;
+}
+
+.nav-items2 ul {
+	padding-top: 50px;
+	position: absolute;
+	height: 100vh;
+	width: 230px;
+	left: -230px;
+	list-style: none;
+	background-color: rgb(22, 28, 23);
+	transition: transform 0.3s;
+}
+
+.nav-items2 a {
+	display: block;
+	padding: 40px auto;
+	font-size: 30px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav-items2 a:hover {
+	font-weight: bold;
+}
+
+.burger-icon {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	padding: 10px 20px;
+	font-size: 36px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	transition: transform 0.3s;
+}
+
+.active {
+	transform: translateX(230px);
+}
+
+.hide {
+	display: none;
+}
+
+
+.nav-items2 a:hover {
+	color: rgb(166, 209, 181);
+}
+
+/* Nagłówek */
+
+header {
+	position: relative;
+	height: 330px;
+	background-image: url('../img/jungleSmall.jpg');
+	background-size: cover;
+}
+
+.hero-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 28, 5, 0.8);
+}
+
+.text-bg {
+	position: absolute;
+	top: 25%;
+	left: 45%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+
+.text-bg span {
+	text-transform: uppercase;
+	color: rgb(166, 209, 181);
+}
+
+.text-bg h1 {
+	margin-bottom: 5px;
+	text-shadow: 3px 3px 5px #000;
+}
+
+/* Główna część strony */
+
+main {
+	margin: 60px 0px;
+}
+
+.about-us {
+	margin: 50px auto;
+}
+
+.section-tittle {
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+section {
+	scroll-margin-top: 90px;
+}
+
+.product {
+	position: relative;
+	height: 330px;
+	margin-bottom: 50px;
+	background-size: cover;
+	background-position: center;
+}
+
+.first-product {
+	background-image: url('../img/małeMałki.jpg');
+}
+
+.secend-product {
+	background-image: url('../img/technologiaMała.jpg');
+}
+
+.thrid-product {
+	background-image: url('../img/przyjazneMałe.jpg');
+}
+
+.fourth-product {
+	background-image: url('../img/kompatybilneMałe.jpg');
+}
+
+.product .hero-bg {
+	height: 55%;
+	bottom: 0;
+}
+
+.product .hero-text {
+	position: absolute;
+	top: 50%;
+	color: #fff;
+}
+
+.hero-text h3 {
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	transition: transform 0.5s;
+}
+
+.product:hover h3 {
+	transform: scale(1.5);
+}
+
+.contact h3 {
+	margin: 5px auto;
+}
+
+/* Zakończenie */
+
+footer {
+	position: relative;
+	height: 100px;
+	color: #fff;
+	font-weight: bold;
+	background-color: rgb(22, 28, 23);
+}
+
+footer p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+}
+
+/*Rozmiar od450px*/
+@media (min-width: 450px) {
+	.nav-items2 ul {
+		width: 350px;
+		left: -350px;
+	}
+
+	.nav-items2 a {
+		font-size: 30px;
+	}
+
+	.active {
+		transform: translateX(350px);
+	}
+}
+
+/* Rozmiar od 768px */
+
+@media (min-width: 768px) {
+	.burger-icon {
+		display: none;
+	}
+
+	.nav-items {
+		display: inline-block;
+	}
+
+	.nav-items a {
+		padding: 0 40px;
+		font-size: 20px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #fff;
+		transition: color 0.3s;
+	}
+
+	.nav-items a:hover {
+		color: rgb(166, 209, 181);
+	}
+
+	header {
+		height: 400px;
+		background-image: url(../img/jungleBig.jpg);
+	}
+
+	.text-bg h1 {
+		font-size: 40px;
+	}
+
+	.text-bg p {
+		font-size: 20px;
+	}
+	.first-product {
+		background-image: url('../img/dużeMałpki.jpg');
+	}
+
+	.secend-product {
+		background-image: url('../img/technologiaDuża.jpg');
+	}
+
+	.thrid-product {
+		background-image: url('../img/przyjazneDuze.jpg');
+	}
+
+	.fourth-product {
+		background-image: url('../img/kompatybilneDuze.jpg');
+	}
+
+	.product .hero-bg {
+		height: 40%;
+		bottom: 0;
+	}
+
+	.product .hero-text {
+		top: 65%;
+	}
+
+	.hero-text h3 {
+		margin-bottom: 5px;
+		font-size: 24px;
+	}
+}
+
+/* Rozmiar od 992 */
+
+@media (min-width: 992px) {
+	.nav-items {
+		padding: 0 80px;
+	}
+}
+
+/* Rozmiar od 1200px */
+
+@media (min-width: 1200px) {
+	p {
+		font-size: 20px;
+	}
+
+	.text-bg {
+		left: 40%;
+	}
+
+	.text-bg h1 {
+		font-size: 50px;
+	}
+
+	.text-bg p {
+		font-size: 25px;
+	}
+
+	.product {
+		background-attachment: fixed;
+		border-radius: 30px;
+		overflow: hidden;
+	}
+
+	.product .hero-bg {
+		height: 40%;
+		bottom: 0;
+	}
+
+	.product .hero-text {
+		position: absolute;
+		top: 68%;
+		color: #fff;
+	}
+
+	.hero-text h3 {
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+}
